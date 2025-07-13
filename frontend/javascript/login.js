@@ -27,9 +27,15 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         } else {
             // Se a API retornar erro 401 (não autorizado), redireciona para a página de cadastro
             if (resposta.status === 401) {
-                alert('Usuário não cadastrado.');
-                window.location.href = '/usuario.html'; // Redireciona para o formulário de cadastro
-            } else {
+                alert('Usuário ou senha inválidos. Verifique e tente novamente.');
+
+                // Opcional: oferecer ir para o cadastro se for novo usuário
+                const criarConta = confirm('Deseja criar uma nova conta?');
+                if (criarConta) {
+                    window.location.href = '/usuario.html'; // Redireciona para o formulário de cadastro
+                }
+            }
+            else {
                 // Exibe a mensagem de erro retornada pela API ou uma genérica
                 alert(dados.message || 'Erro desconhecido');
             }

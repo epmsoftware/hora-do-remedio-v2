@@ -50,16 +50,17 @@ rotas.post('/', (pedido, resposta) => {
 //    });
 //});
 
-rotas.get('/:usuarioId', (req, res) => {
-    const usuarioId = req.params.usuarioId;
+// Rota para buscar os medicamentos de um usuário
+rotas.get('/:usuarioId', (pedido, resposta) => {
+    const usuarioId = pedido.params.usuarioId;
 
     const sql = 'SELECT * FROM cadastromedicamentos WHERE paciente_id = ?';
     banco.all(sql, [usuarioId], (erro, rows) => {
         if (erro) {
             console.error('Erro ao buscar medicamentos:', erro.message);
-            return res.status(500).json({ erro: 'Erro ao buscar medicamentos' });
+            return resposta.status(500).json({ erro: 'Erro ao buscar medicamentos' });
         }
-        res.status(200).json(rows);
+        resposta.status(200).json(rows);
     });
 });
 
