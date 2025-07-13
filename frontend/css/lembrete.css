@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/descarte.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.container_Notas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back i {
+    font-size: 50px;
+    color: #fff;
+    position: fixed;
+    top: 25px;
+    left: 35px;
+}
+
+.back i:hover {
+    cursor: pointer;
+}
+
+h2 {
+    padding: 40px 40px 0 40px;
+    width: 98%;
+    color: gainsboro;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.divLinks {
+    display: flex;
+    gap: 45px;
+}
+
+.fa-trash-can {
+    font-size: 27px;
+    color: #fff;
+}
+
+.linkLixeira {
+    display: flex;
+    align-items: center;
+}
+
+.fa-trash-can:hover {
+    cursor: pointer;
+}
+
+.fa-pen {
+    font-size: 27px;
+    color: #fff;
+}
+
+.fa-pen:hover {
+    cursor: pointer;
+}
+
+.linkEdit {
+    display: flex;
+    align-items: center;
+}
+
+.imagemEdit:hover {
+    cursor: pointer;
+}
+
+
+.container_Cadastrados {
+    background-color: transparent;
+    padding: 0.5% 1% 1% 1%;
+    margin-top: 2%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.medicamento {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 1%;
+    width: 100%;
+    border-radius: 4px;
+    border: inset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nomeRemedio {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+p {
+    margin-top: 5px;
+    color: gainsboro;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+footer {
+    width: 95%;
+    margin-top: 22%;
+    margin-left: 2%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVO: TABLETS */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .fa-trash-can,
+    .fa-pen {
+        font-size: 22px;
+    }
+
+    .nomeRemedio {
+        font-size: 1rem;
+    }
+}
+
+/* RESPONSIVO: CELULARES */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.3rem;
+        margin-top: 80px;
+    }
+
+    .back i {
+        font-size: 32px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .container_Cadastrados {
+        padding: 5px;
+    }
+
+    .medicamento {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nomeRemedio {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .switch {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
+
+/* RESPONSIVO: CELULARES PEQUENOS */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .fa-trash-can,
+    .fa-pen {
+        font-size: 20px;
+    }
+
+    .nomeRemedio {
+        font-size: 0.95rem;
+    }
+
+    .switch {
+        width: 50px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 22px;
+        width: 22px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}

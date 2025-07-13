@@ -1,0 +1,82 @@
+/* Estiliza a tela principal */
+.tela-inicial {
+  height: 100%; /* Ocupa toda a altura da tela */
+  font-family: Arial, sans-serif; /* Define a fonte do texto */
+  margin: 0; /* Remove margens externas */
+  padding: 0; /* Remove preenchimento interno */
+  
+  /* Define imagem de fundo com um degradê escuro sobreposto */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/Fundo\ form.webp');
+  background-size: cover; /* Faz a imagem cobrir toda a área da tela */
+  
+  /* Centraliza o conteúdo usando Flexbox */
+  display: flex;
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: center; /* Alinha ao centro horizontalmente */
+  justify-content: center; /* Alinha ao centro verticalmente */
+}
+
+/* Estiliza o container central (formulário ou painel de login) */
+.container {
+  background: #FFFFFF80; /* Fundo branco semi-transparente (50% de opacidade) */
+  backdrop-filter: blur(1px); /* Desfoca o fundo atrás do container */
+  padding: 40px 50px 10px 40px; /* Espaçamento interno: top, right, bottom, left */
+  min-width: 300px; /* Largura mínima do container */
+  min-height: 300px; /* Altura mínima do container */
+  border-radius: 3px; /* Cantos levemente arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra escura ao redor */
+  margin-top: 15px; /* Espaçamento superior */
+}
+
+/* Estiliza o botão de "Entrar" */
+.botao-entrar {
+  padding: 12px 24px; /* Espaço interno do botão */
+  background-color: #007BFF; /* Cor de fundo azul */
+  color: white; /* Cor do texto branca */
+  text-decoration: none; /* Remove sublinhado */
+  border-radius: 8px; /* Cantos arredondados */
+  margin-top: 20px; /* Espaço acima do botão */
+  display: inline-block; /* Permite aplicar margin e padding corretamente */
+  transition: background-color ease 0.1s; /* Suaviza mudança de cor ao passar o mouse */
+}
+
+/* Muda a cor de fundo do botão quando o mouse passa por cima */
+.botao-entrar:hover {
+  background-color: #3592f5; /* Azul mais claro no hover */
+}
+
+/* Estiliza as imagens animadas chamadas "pill" */
+.pill {
+  position: absolute; /* Posicionamento livre na tela */
+  width: 110px; /* Largura fixa da imagem */
+  height: 110px; /* Altura fixa da imagem */
+  opacity: 0; /* Inicialmente invisível */
+  animation: fadeSlideUpRepeat 3s ease-in-out infinite; /* Aplica animação contínua */
+  object-fit: contain; /* Garante que a imagem se ajuste sem cortar ou distorcer */
+}
+
+/* Primeira pílula animada (segunda filha no HTML) */
+.pill:nth-child(2) {
+  top: 100px; /* Distância do topo */
+  left: 265px; /* Distância da esquerda */
+  animation-delay: 0s; /* Sem atraso para começar a animação */
+}
+
+/* Segunda pílula animada (terceira filha no HTML) */
+.pill:nth-child(3) {
+  top: 140px;
+  left: 290px;
+  animation-delay: 1.5s; /* Começa 1.5 segundos depois para alternar as animações */
+}
+
+/* Define a animação de aparecer e subir suavemente */
+@keyframes fadeSlideUpRepeat {
+  0%, 100% {
+    opacity: 0; /* Invisível no início e no fim */
+    transform: translateY(20px); /* Levemente deslocada para baixo */
+  }
+  50% {
+    opacity: 1; /* Totalmente visível no meio da animação */
+    transform: translateY(0); /* Volta à posição original */
+  }
+}

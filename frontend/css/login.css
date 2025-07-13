@@ -1,0 +1,165 @@
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/Fundo\ form.webp');
+  background-size: cover;
+  /* cobre toda a área */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container,
+.login-container {
+  background: #FFFFFF80;
+  backdrop-filter: blur(1px);
+  padding: 40px 50px 10px 40px;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid;
+  background: transparent;
+}
+
+.button,
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color ease 0.1s;
+}
+
+.button, 
+button:hover {
+  background-color: #3592f5;
+}
+
+a {
+  font-size: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.logo-wrapper {
+  margin-top: 20px;
+  padding: 12px 20px 8px;
+  border-radius: 5px;
+  text-align: center;
+  width: 200px;
+  overflow: hidden;
+}
+
+.scaled-container {
+  transform: scale(0.17);
+  /* Escala menor para o conjunto */
+  transform-origin: top center;
+  margin-left: -50px;
+  /* Centralização visual */
+}
+
+.logo-container {
+  position: relative;
+  width: 562px;
+  height: 177px;
+  margin-bottom: -80px;
+  /* Proporção container */
+}
+
+.logo-container img.background {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pill {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  opacity: 0;
+  animation: fadeSlideUpRepeat 3s ease-in-out infinite;
+  object-fit: contain;
+}
+
+.pill:nth-child(2) {
+  top: 180px;
+  left: 530px;
+  animation-delay: 0s;
+}
+
+.pill:nth-child(3) {
+  top: 260px;
+  left: 580px;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeSlideUpRepeat {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-top: 10px;
+}
+
+i {
+  font-size: 50px;
+  color: #fff;
+  position: fixed;
+  top: 25px;
+  left: 35px;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+footer {
+  width: 95%;
+  margin-top: 22%;
+  margin-left: 2%;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

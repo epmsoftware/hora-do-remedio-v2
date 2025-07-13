@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Cadastro de medicamentos</title>
+    <link rel="stylesheet" href="/css/cadastro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/images/cadastro1.jpg">
+</head>
+
+<body>
+    <i class="fas fa-backward fa-beat-fade"></i>
+
+    <div class="container">
+        <div class="formularioMedicamentos">
+            <h1>Cadastro de Medicamentos</h1>
+            <form id="medicamentoForm">
+                <input type="text" id="nome" name="nome" placeholder="Nome do remédio" required>
+
+                <input id="validade" type="date" name="validade" />
+
+                <input id="quantidade" type="number" name="quantidade" placeholder="Quantidade" min="1" />
+
+                <select id="frequencia" name="frequencia">
+                    <option value="">Selecione uma frequência</option>
+                    <option>Uma vez ao dia</option>
+                    <option>Duas vezes ao dia</option>
+                    <option>Três vezes ao dia</option>
+                </select>
+
+                <div id="containerDosagem" class="dos" style="display: none;">
+                    <input id="dosagem" type="text" placeholder="Dosagem">
+                </div>
+
+                <div class="container1horario" id="container1horario" style="display: none;">
+                    <label for="frequencia1horario1" class="horario">Selecione um Horário:</label>
+                    <input type="time" id="frequencia1horario1" step="60" />
+                </div>
+
+                <div class="container2horario" id="container2horario" style="display: none;">
+                    <label for="frequencia2horario1" class="horario">Selecione seus Horários:</label>
+                    <input type="time" id="frequencia2horario1" step="60" />
+                    <input type="time" id="frequencia2horario2" step="60" />
+                </div>
+
+                <div class="container3horario" id="container3horario" style="display: none;">
+                    <label for="frequencia3horario1" class="horario">Selecione seus Horários:</label>
+                    <input type="time" id="frequencia3horario1" step="60" />
+                    <input type="time" id="frequencia3horario2" step="60" />
+                    <input type="time" id="frequencia3horario3" step="60" />
+                </div>
+
+                <select id="paciente_id" name="paciente_id" required>
+                    <option value="">Selecione um paciente</option>
+                </select>
+
+                <label for="descricao">
+                    <textarea id="descricao" name="descricao" class='descricao' type='text'
+                        placeholder='Coloque aqui a informação do Remédio'></textarea>
+                </label>
+
+                <div class="button_adicionar">
+                    <button type="submit">Adicionar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--
+    <footer>
+        <p>&copy; 2025 Hora do Remédio.</p>
+    </footer>
+    -->
+    <script src="/javascript/cadastro.js"></script>
+</body>
+
+</html>

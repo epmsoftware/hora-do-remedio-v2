@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/Fundo\ form.webp');
+  backdrop-filter: blur(1px);
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  padding: 2% 2% 0 2%;
+}
+
+header i:hover {
+  cursor: pointer;
+}
+
+i {
+  font-size: 50px;
+  color: #fff;
+  position: fixed;
+  top: 25px;
+  left: 35px;
+}
+
+.section2 {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin: 100px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2%;
+  border-radius: 20px;
+}
+
+.section2 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.section2 p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 450px;
+  text-align: justify;
+}
+
+footer {
+    width: 95%;
+    margin-top: 22%;
+    margin-left: 2%;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .section2 {
+    flex-direction: column;
+    display: flex;
+    
+    padding: 20px;
+    
+  }
+
+  .section2 p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .section2 img {
+    max-width: 100%;
+  }
+}
